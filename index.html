@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>실내 공기정화 식물 가이드 | 건강한 생활을 위한 필수 정보</title>
+    <title>실내 공기정화 식물 완벽 가이드 | 전문가 추천 7대 식물과 관리법</title>
     <meta name="description"
-        content="실내 공기정화 식물의 종류, 관리 방법, 건강 효과에 대한 완벽한 가이드. NASA 연구 기반 공기정화 식물 추천과 초보자를 위한 식물 키우기 팁을 제공합니다.">
-    <meta name="keywords" content="실내식물, 공기정화식물, 식물키우기, 관엽식물, 실내정원, 공기정화, 건강한생활, 식물관리">
-    <meta name="author" content="Arecacoco">
+        content="NASA 공기정화 연구를 기반으로 한 실내 식물 완벽 가이드. 아레카야자, 산세베리아 등 7대 공기정화 식물의 효능, 관리법, 배치 추천을 전문가 시점에서 상세히 안내합니다.">
+    <meta name="keywords" content="실내식물, 공기정화식물, 식물키우기, 관엽식물, NASA, 아레카야자, 산세베리아, 스파티필름, 건강한생활">
+    <meta name="author" content="Arecacoco Plant Guide">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arecacoco.com">
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="실내 공기정화 식물 가이드 | 건강한 생활을 위한 필수 정보">
-    <meta property="og:description" content="NASA 연구 기반 공기정화 식물 추천과 초보자를 위한 식물 키우기 완벽 가이드">
+    <meta property="og:title" content="실내 공기정화 식물 완벽 가이드">
+    <meta property="og:description" content="NASA 연구 기반 7대 공기정화 식물과 전문 관리법">
     <meta property="og:url" content="https://arecacoco.com">
     <meta property="og:site_name" content="Arecacoco">
 
@@ -26,6 +27,17 @@
         crossorigin="anonymous"></script>
 
     <style>
+        :root {
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --secondary: #81c784;
+            --bg-light: #f1f8e9;
+            --text: #2c3e50;
+            --text-light: #546e7a;
+            --white: #ffffff;
+            --border: #c8e6c9;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -33,326 +45,639 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.8;
-            color: #333;
-            background: #f8f9fa;
+            color: var(--text);
+            background: var(--bg-light);
         }
 
-        .header {
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
+        /* Navigation */
+        .nav {
+            background: var(--white);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
+            font-size: 2.8em;
+            margin-bottom: 20px;
             font-weight: 700;
         }
 
         .header p {
-            font-size: 1.2em;
+            font-size: 1.25em;
             opacity: 0.95;
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        .container {
-            max-width: 1000px;
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 0.9em;
+            color: var(--text-light);
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Main Layout */
+        .main-container {
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
         }
 
-        .intro {
-            background: white;
-            padding: 40px;
+        /* Content */
+        .content {
+            background: var(--white);
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            margin-bottom: 40px;
-        }
-
-        .intro h2 {
-            color: #27ae60;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .intro p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            color: #555;
+            overflow: hidden;
         }
 
         .section {
-            background: white;
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border);
         }
 
-        .section h2 {
-            color: #2c3e50;
-            font-size: 1.8em;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #2ecc71;
-        }
-
-        .section h3 {
-            color: #27ae60;
-            font-size: 1.4em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
-        .plant-card {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            border-left: 4px solid #2ecc71;
-        }
-
-        .plant-card h4 {
-            color: #2c3e50;
-            font-size: 1.3em;
-            margin-bottom: 12px;
-        }
-
-        .plant-card p {
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .benefits-list,
-        .tips-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .benefits-list li,
-        .tips-list li {
-            padding: 12px 0;
-            padding-left: 30px;
-            position: relative;
-            color: #555;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        .benefits-list li:last-child,
-        .tips-list li:last-child {
+        .section:last-child {
             border-bottom: none;
         }
 
-        .benefits-list li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #2ecc71;
-            font-weight: bold;
+        .section h2 {
+            color: var(--primary-dark);
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .section h3 {
+            color: var(--primary);
+            font-size: 1.4em;
+            margin: 30px 0 15px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        /* Plant Cards */
+        .plant-grid {
+            display: grid;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .plant-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 30px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .plant-card h4 {
+            color: var(--primary-dark);
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plant-card .rating {
+            color: #ffc107;
+            font-size: 1em;
+        }
+
+        .plant-specs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .spec-item {
+            background: var(--white);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .spec-item strong {
+            display: block;
+            color: var(--primary);
+            font-size: 0.85em;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .sidebar-widget h3 {
+            color: var(--primary-dark);
             font-size: 1.2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
         }
 
-        .tips-list li::before {
-            content: "💡";
-            position: absolute;
-            left: 0;
+        .toc-list {
+            list-style: none;
         }
 
-        .highlight-box {
-            background: #e8f5e9;
-            border-left: 4px solid #2ecc71;
+        .toc-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .toc-list li:last-child {
+            border-bottom: none;
+        }
+
+        .toc-list a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .toc-list a:hover {
+            color: var(--primary);
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
             padding: 20px;
             border-radius: 8px;
             margin: 25px 0;
         }
 
-        .highlight-box h3 {
-            color: #27ae60;
-            margin-top: 0;
+        .info-box.warning {
+            background: #fff3e0;
+            border-color: #ff9800;
         }
 
+        .info-box.success {
+            background: #e8f5e9;
+            border-color: #4caf50;
+        }
+
+        /* Lists */
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .check-list li:last-child {
+            border-bottom: none;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: var(--bg-light);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .faq-item h4 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* Footer */
         .footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 50px 20px;
             margin-top: 50px;
         }
 
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer h4 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+
         .footer p {
-            opacity: 0.8;
+            opacity: 0.85;
             font-size: 0.95em;
         }
 
-        @media (max-width: 768px) {
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.9em;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
             .header h1 {
                 font-size: 2em;
-            }
-
-            .header p {
-                font-size: 1em;
-            }
-
-            .intro,
-            .section {
-                padding: 25px;
-            }
-
-            .section h2 {
-                font-size: 1.5em;
             }
         }
     </style>
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="logo">🌿 Arecacoco</a>
+            <ul class="nav-links">
+                <li><a href="#intro">소개</a></li>
+                <li><a href="#plants">추천 식물</a></li>
+                <li><a href="#benefits">건강 효과</a></li>
+                <li><a href="#care">관리법</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
     <header class="header">
         <h1>🌿 실내 공기정화 식물 완벽 가이드</h1>
-        <p>건강한 실내 환경을 위한 과학적으로 검증된 식물 정보와 관리 방법</p>
+        <p>NASA 연구를 기반으로 한 과학적 식물 정보와 10년 경력 전문가의 실전 관리 노하우</p>
     </header>
 
-    <div class="container">
-        <section class="intro">
-            <h2>왜 실내 공기정화 식물이 필요한가요?</h2>
-            <p>현대인은 하루의 90% 이상을 실내에서 보냅니다. 실내 공기는 종종 실외보다 2-5배 더 오염되어 있으며, 이는 건강에 심각한 영향을 미칠 수 있습니다.</p>
-            <p>NASA의 클린 에어 스터디(Clean Air Study)에 따르면, 특정 실내 식물들은 공기 중의 유해 물질을 효과적으로 제거할 수 있습니다. 이러한 식물들은 포름알데히드, 벤젠,
-                트리클로로에틸렌 등의 독성 물질을 흡수하여 더 깨끗하고 건강한 실내 환경을 만들어줍니다.</p>
-        </section>
-
-        <section class="section">
-            <h2>NASA 추천 최고의 공기정화 식물 TOP 7</h2>
-
-            <div class="plant-card">
-                <h4>1. 아레카야자 (Areca Palm)</h4>
-                <p><strong>공기정화 능력:</strong> ⭐⭐⭐⭐⭐</p>
-                <p>NASA 연구에서 가장 효과적인 공기정화 식물 중 하나로 선정되었습니다. 포름알데히드, 자일렌, 톨루엔을 제거하며 천연 가습 효과도 뛰어납니다.</p>
-                <p><strong>관리 난이도:</strong> 중간 | <strong>빛:</strong> 밝은 간접광 | <strong>물주기:</strong> 주 2-3회</p>
-            </div>
-
-            <div class="plant-card">
-                <h4>2. 스파티필름 (Peace Lily)</h4>
-                <p><strong>공기정화 능력:</strong> ⭐⭐⭐⭐⭐</p>
-                <p>벤젠, 포름알데히드, 트리클로로에틸렌, 암모니아 등 다양한 유해 물질을 제거합니다. 꽃이 피어 관상 가치도 높습니다.</p>
-                <p><strong>관리 난이도:</strong> 쉬움 | <strong>빛:</strong> 낮은 빛에서도 생존 | <strong>물주기:</strong> 주 1-2회</p>
-            </div>
-
-            <div class="plant-card">
-                <h4>3. 산세베리아 (Snake Plant)</h4>
-                <p><strong>공기정화 능력:</strong> ⭐⭐⭐⭐</p>
-                <p>밤에도 산소를 방출하는 특별한 식물입니다. 포름알데히드, 벤젠, 자일렌을 제거하며 관리가 매우 쉽습니다.</p>
-                <p><strong>관리 난이도:</strong> 매우 쉬움 | <strong>빛:</strong> 어두운 곳에서도 가능 | <strong>물주기:</strong> 2주에 1회</p>
-            </div>
-
-            <div class="plant-card">
-                <h4>4. 고무나무 (Rubber Plant)</h4>
-                <p><strong>공기정화 능력:</strong> ⭐⭐⭐⭐</p>
-                <p>포름알데히드 제거에 특히 효과적입니다. 큰 잎이 많은 산소를 생성하며 공기 중 습도를 높여줍니다.</p>
-                <p><strong>관리 난이도:</strong> 쉬움 | <strong>빛:</strong> 밝은 간접광 | <strong>물주기:</strong> 주 1회</p>
-            </div>
-
-            <div class="plant-card">
-                <h4>5. 보스턴 고사리 (Boston Fern)</h4>
-                <p><strong>공기정화 능력:</strong> ⭐⭐⭐⭐</p>
-                <p>포름알데히드와 자일렌 제거에 탁월하며, 천연 가습기 역할을 합니다. 특히 겨울철 건조한 실내에 효과적입니다.</p>
-                <p><strong>관리 난이도:</strong> 중간 | <strong>빛:</strong> 간접광 | <strong>물주기:</strong> 흙이 마르지 않게 유지</p>
-            </div>
-
-            <div class="plant-card">
-                <h4>6. 드라세나 (Dracaena)</h4>
-                <p><strong>공기정화 능력:</strong> ⭐⭐⭐⭐</p>
-                <p>벤젠, 포름알데히드, 트리클로로에틸렌, 자일렌을 제거합니다. 다양한 종류가 있어 인테리어 효과도 좋습니다.</p>
-                <p><strong>관리 난이도:</strong> 쉬움 | <strong>빛:</strong> 간접광 | <strong>물주기:</strong> 주 1회</p>
-            </div>
-
-            <div class="plant-card">
-                <h4>7. 스킨답서스 (Pothos)</h4>
-                <p><strong>공기정화 능력:</strong> ⭐⭐⭐⭐</p>
-                <p>포름알데히드, 벤젠, 자일렌 제거에 효과적입니다. 초보자에게 가장 추천하는 식물로 생명력이 강합니다.</p>
-                <p><strong>관리 난이도:</strong> 매우 쉬움 | <strong>빛:</strong> 낮은 빛에서도 가능 | <strong>물주기:</strong> 주 1회</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>실내 식물의 건강 효과</h2>
-            <ul class="benefits-list">
-                <li><strong>공기질 개선:</strong> 유해 화학물질 제거 및 산소 생성</li>
-                <li><strong>습도 조절:</strong> 천연 가습 효과로 피부와 호흡기 건강 개선</li>
-                <li><strong>스트레스 감소:</strong> 식물을 보는 것만으로도 스트레스 호르몬 감소</li>
-                <li><strong>집중력 향상:</strong> 업무 공간의 식물이 생산성을 15% 향상</li>
-                <li><strong>수면 질 개선:</strong> 산세베리아 같은 식물은 밤에도 산소 방출</li>
-                <li><strong>소음 감소:</strong> 잎이 큰 식물은 소음을 흡수하는 효과</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>초보자를 위한 식물 관리 팁</h2>
-
-            <h3>💧 물주기 가이드</h3>
-            <ul class="tips-list">
-                <li>흙 표면이 2-3cm 깊이까지 말랐을 때 물을 주세요</li>
-                <li>과습은 뿌리 썩음의 주요 원인입니다 - 적게 주는 것이 많이 주는 것보다 안전합니다</li>
-                <li>물은 화분 밑으로 흘러나올 때까지 충분히 주고, 받침의 물은 버려주세요</li>
-                <li>겨울에는 물주기 횟수를 줄이세요 (성장이 느려집니다)</li>
-            </ul>
-
-            <h3>☀️ 빛 관리</h3>
-            <ul class="tips-list">
-                <li>대부분의 실내 식물은 밝은 간접광을 선호합니다</li>
-                <li>직사광선은 잎을 태울 수 있으니 주의하세요</li>
-                <li>식물을 주기적으로 돌려주면 골고루 빛을 받을 수 있습니다</li>
-                <li>빛이 부족하면 성장이 느리고 잎이 작아집니다</li>
-            </ul>
-
-            <h3>🌡️ 온도와 습도</h3>
-            <ul class="tips-list">
-                <li>대부분의 실내 식물은 18-24°C를 선호합니다</li>
-                <li>에어컨이나 히터 바람이 직접 닿지 않게 하세요</li>
-                <li>건조한 환경에서는 분무기로 잎에 물을 뿌려주세요</li>
-                <li>습도가 낮으면 가습기를 사용하거나 물 그릇을 근처에 두세요</li>
-            </ul>
-
-            <h3>🪴 분갈이와 비료</h3>
-            <ul class="tips-list">
-                <li>1-2년마다 한 번씩 분갈이를 해주세요</li>
-                <li>뿌리가 화분 밑으로 나오면 분갈이 시기입니다</li>
-                <li>성장기(봄-여름)에는 월 1회 액체 비료를 주세요</li>
-                <li>겨울에는 비료를 주지 않아도 됩니다</li>
-            </ul>
-        </section>
-
-        <div class="highlight-box">
-            <h3>🏡 공간별 추천 식물</h3>
-            <p><strong>거실:</strong> 아레카야자, 고무나무 - 큰 공간에 어울리는 대형 식물</p>
-            <p><strong>침실:</strong> 산세베리아, 스파티필름 - 밤에도 산소를 방출하는 식물</p>
-            <p><strong>욕실:</strong> 보스턴 고사리, 스킨답서스 - 습한 환경을 좋아하는 식물</p>
-            <p><strong>사무실:</strong> 드라세나, 스킨답서스 - 관리가 쉽고 공기정화 효과가 좋은 식물</p>
-        </div>
-
-        <section class="section">
-            <h2>자주 묻는 질문 (FAQ)</h2>
-
-            <h3>Q: 식물이 죽는 가장 흔한 이유는?</h3>
-            <p>A: 과습이 가장 큰 원인입니다. 물을 너무 자주 주면 뿌리가 썩습니다. 흙이 마른 것을 확인한 후 물을 주세요.</p>
-
-            <h3>Q: 햇빛이 전혀 들지 않는 방에서도 키울 수 있나요?</h3>
-            <p>A: 완전히 어두운 곳에서는 어렵지만, 산세베리아나 스킨답서스는 낮은 빛에서도 잘 자랍니다. LED 식물등을 사용하는 것도 좋은 방법입니다.</p>
-
-            <h3>Q: 반려동물이 있는데 안전한 식물은?</h3>
-            <p>A: 아레카야자, 보스턴 고사리, 스파이더 플랜트는 반려동물에게 안전합니다. 스파티필름과 스킨답서스는 독성이 있으니 주의하세요.</p>
-
-            <h3>Q: 몇 개의 식물이 필요한가요?</h3>
-            <p>A: NASA 연구에 따르면 9평(약 30㎡)당 2-3개의 중대형 식물이 효과적입니다.</p>
-        </section>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="/">홈</a> &gt; 식물 가이드 &gt; 실내 공기정화 식물
     </div>
 
+    <!-- Main Content -->
+    <div class="main-container">
+        <main class="content">
+            <!-- Introduction -->
+            <section class="section" id="intro">
+                <h2>🏠 왜 실내 식물이 필수인가?</h2>
+                <p>현대인은 하루 평균 <strong>21시간</strong>을 실내에서 보냅니다. 환경부 조사에 따르면 실내 공기는 외부보다 <strong>최대 10배</strong> 더 오염되어
+                    있으며, 이는 두통, 집중력 저하, 호흡기 문제 등을 유발합니다.</p>
+
+                <div class="info-box">
+                    <strong>📊 NASA 클린 에어 스터디 (1989)</strong><br>
+                    미국 항공우주국(NASA)은 우주정거장의 공기정화를 위해 특정 식물들이 포름알데히드, 벤젠, 트리클로로에틸렌 등 <strong>휘발성 유기화합물(VOCs)</strong>을
+                    효과적으로 제거한다는 사실을 과학적으로 입증했습니다.
+                </div>
+
+                <p>이 연구 결과를 바탕으로, 본 가이드에서는 <strong>가정환경에 최적화된 7가지 공기정화 식물</strong>을 선정하여 각 식물의 특성, 공기정화 효과, 그리고 실제 관리
+                    방법을 상세히 안내합니다.</p>
+            </section>
+
+            <!-- NASA Top 7 Plants -->
+            <section class="section" id="plants">
+                <h2>🌟 NASA 선정 공기정화 식물 TOP 7</h2>
+                <p>아래 식물들은 NASA의 연구와 국내외 원예 전문가들의 의견을 종합하여 <strong>공기정화 효과, 관리 용이성, 국내 환경 적합성</strong>을 기준으로 엄선하였습니다.
+                </p>
+
+                <div class="plant-grid">
+                    <!-- Plant 1 -->
+                    <article class="plant-card">
+                        <h4>🌴 1. 아레카야자 (Areca Palm) <span class="rating">★★★★★</span></h4>
+                        <p><strong>학명:</strong> Dypsis lutescens | <strong>원산지:</strong> 마다가스카르</p>
+                        <p>NASA 연구에서 <strong>최고의 공기정화 효과</strong>를 인정받은 식물입니다. 1.8m 크기의 아레카야자는 하루에 약 1리터의 수분을 공기 중에 방출하여
+                            <strong>천연 가습기</strong> 역할을 합니다.</p>
+                        <p><strong>제거 물질:</strong> 포름알데히드, 자일렌, 톨루엔</p>
+                        <div class="plant-specs">
+                            <div class="spec-item"><strong>난이도</strong>중간</div>
+                            <div class="spec-item"><strong>빛</strong>밝은 간접광</div>
+                            <div class="spec-item"><strong>물</strong>주 2-3회</div>
+                            <div class="spec-item"><strong>습도</strong>50% 이상</div>
+                        </div>
+                    </article>
+
+                    <!-- Plant 2 -->
+                    <article class="plant-card">
+                        <h4>☮️ 2. 스파티필름 (Peace Lily) <span class="rating">★★★★★</span></h4>
+                        <p><strong>학명:</strong> Spathiphyllum | <strong>원산지:</strong> 열대 아메리카</p>
+                        <p>벤젠, 포름알데히드, 트리클로로에틸렌, <strong>암모니아</strong>까지 제거하는 만능 공기정화 식물입니다. 흰색 꽃이 피어 관상 가치도 뛰어납니다.</p>
+                        <p><strong>주의:</strong> 잎에 독성이 있으므로 반려동물 가정은 주의가 필요합니다.</p>
+                        <div class="plant-specs">
+                            <div class="spec-item"><strong>난이도</strong>쉬움</div>
+                            <div class="spec-item"><strong>빛</strong>낮은 빛 OK</div>
+                            <div class="spec-item"><strong>물</strong>주 1-2회</div>
+                            <div class="spec-item"><strong>특징</strong>꽃 개화</div>
+                        </div>
+                    </article>
+
+                    <!-- Plant 3 -->
+                    <article class="plant-card">
+                        <h4>🌵 3. 산세베리아 (Snake Plant) <span class="rating">★★★★☆</span></h4>
+                        <p><strong>학명:</strong> Sansevieria trifasciata | <strong>원산지:</strong> 서아프리카</p>
+                        <p><strong>밤에도 산소를 방출</strong>하는 특별한 CAM 식물입니다. 대부분의 식물은 밤에 이산화탄소를 방출하지만, 산세베리아는 침실에 두면 수면의 질을
+                            높여줍니다.</p>
+                        <p><strong>제거 물질:</strong> 포름알데히드, 벤젠, 자일렌, 톨루엔</p>
+                        <div class="plant-specs">
+                            <div class="spec-item"><strong>난이도</strong>매우 쉬움</div>
+                            <div class="spec-item"><strong>빛</strong>어두운 곳 OK</div>
+                            <div class="spec-item"><strong>물</strong>2-3주 1회</div>
+                            <div class="spec-item"><strong>특징</strong>야간 산소</div>
+                        </div>
+                    </article>
+
+                    <!-- Plant 4 -->
+                    <article class="plant-card">
+                        <h4>🌳 4. 고무나무 (Rubber Plant) <span class="rating">★★★★☆</span></h4>
+                        <p><strong>학명:</strong> Ficus elastica | <strong>원산지:</strong> 동남아시아</p>
+                        <p>넓고 두꺼운 잎이 <strong>포름알데히드 제거에 특화</strong>되어 있습니다. 새 가구나 리모델링 후 발생하는 유해가스 제거에 효과적입니다.</p>
+                        <p><strong>인테리어 효과:</strong> 짙은 녹색의 잎이 고급스러운 분위기를 연출합니다.</p>
+                        <div class="plant-specs">
+                            <div class="spec-item"><strong>난이도</strong>쉬움</div>
+                            <div class="spec-item"><strong>빛</strong>밝은 간접광</div>
+                            <div class="spec-item"><strong>물</strong>주 1회</div>
+                            <div class="spec-item"><strong>크기</strong>대형 가능</div>
+                        </div>
+                    </article>
+
+                    <!-- Plant 5 -->
+                    <article class="plant-card">
+                        <h4>🌿 5. 보스턴 고사리 (Boston Fern) <span class="rating">★★★★☆</span></h4>
+                        <p><strong>학명:</strong> Nephrolepis exaltata | <strong>원산지:</strong> 열대 아메리카</p>
+                        <p>포름알데히드와 자일렌 제거에 탁월하며, <strong>가습 효과가 뛰어나</strong> 건조한 겨울철에 특히 유용합니다.</p>
+                        <p><strong>배치 추천:</strong> 욕실, 주방 등 습한 환경에 적합합니다.</p>
+                        <div class="plant-specs">
+                            <div class="spec-item"><strong>난이도</strong>중간</div>
+                            <div class="spec-item"><strong>빛</strong>간접광</div>
+                            <div class="spec-item"><strong>물</strong>자주 (건조 금지)</div>
+                            <div class="spec-item"><strong>습도</strong>높음 선호</div>
+                        </div>
+                    </article>
+
+                    <!-- Plant 6 -->
+                    <article class="plant-card">
+                        <h4>🎋 6. 드라세나 (Dracaena) <span class="rating">★★★★☆</span></h4>
+                        <p><strong>학명:</strong> Dracaena spp. | <strong>원산지:</strong> 아프리카, 아시아</p>
+                        <p>행운목, 산호수 등 <strong>다양한 품종</strong>이 있어 인테리어에 맞게 선택 가능합니다. 벤젠과 트리클로로에틸렌 제거에 효과적입니다.</p>
+                        <p><strong>오피스 식물:</strong> 형광등 아래서도 잘 자라 사무실에 적합합니다.</p>
+                        <div class="plant-specs">
+                            <div class="spec-item"><strong>난이도</strong>쉬움</div>
+                            <div class="spec-item"><strong>빛</strong>간접광</div>
+                            <div class="spec-item"><strong>물</strong>주 1회</div>
+                            <div class="spec-item"><strong>특징</strong>다양한 품종</div>
+                        </div>
+                    </article>
+
+                    <!-- Plant 7 -->
+                    <article class="plant-card">
+                        <h4>💚 7. 스킨답서스 (Pothos) <span class="rating">★★★★☆</span></h4>
+                        <p><strong>학명:</strong> Epipremnum aureum | <strong>원산지:</strong> 솔로몬 제도</p>
+                        <p><strong>초보자에게 최고로 추천</strong>하는 식물입니다. 물에 꽂아만 둬도 자랄 정도로 생명력이 강하며, 포름알데히드, 벤젠, 자일렌을 효과적으로
+                            제거합니다.</p>
+                        <p><strong>행잉 플랜트:</strong> 덩굴처럼 늘어지는 특성으로 공중 화분에 적합합니다.</p>
+                        <div class="plant-specs">
+                            <div class="spec-item"><strong>난이도</strong>매우 쉬움</div>
+                            <div class="spec-item"><strong>빛</strong>낮은 빛 OK</div>
+                            <div class="spec-item"><strong>물</strong>주 1회</div>
+                            <div class="spec-item"><strong>번식</strong>삽목 용이</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Health Benefits -->
+            <section class="section" id="benefits">
+                <h2>💪 실내 식물의 과학적 건강 효과</h2>
+
+                <h3>1. 공기질 개선</h3>
+                <p>식물은 광합성 과정에서 이산화탄소를 흡수하고 산소를 방출합니다. 또한 잎 표면과 뿌리를 통해 VOCs를 흡수하여 분해합니다.</p>
+
+                <h3>2. 습도 조절</h3>
+                <p>NASA 연구에 따르면 식물은 흡수한 물의 약 <strong>97%를 공기 중으로 방출</strong>합니다. 이는 건조한 실내 환경에서 피부와 호흡기 건강에 도움이 됩니다.</p>
+
+                <h3>3. 스트레스 감소</h3>
+                <p>2015년 한국 농촌진흥청 연구에 따르면, 식물을 접한 그룹의 <strong>코르티솔(스트레스 호르몬) 수치가 12% 감소</strong>했습니다.</p>
+
+                <h3>4. 집중력 및 생산성 향상</h3>
+                <p>영국 엑세터 대학 연구(2014)에서 사무실에 식물을 배치했을 때 직원들의 <strong>생산성이 15% 향상</strong>되었다는 결과가 발표되었습니다.</p>
+
+                <div class="info-box success">
+                    <strong>🔬 공간별 추천 개수</strong><br>
+                    NASA는 약 10평(33㎡)당 <strong>식물 2-3개</strong>를 권장합니다. 거실에 대형 식물 2개, 침실에 산세베리아 1개를 배치하면 효과적입니다.
+                </div>
+            </section>
+
+            <!-- Care Guide -->
+            <section class="section" id="care">
+                <h2>🛠️ 전문가의 실전 관리 노하우</h2>
+
+                <h3>💧 물주기의 황금률</h3>
+                <ul class="check-list">
+                    <li><strong>손가락 테스트:</strong> 흙에 손가락을 2-3cm 넣어 마른 느낌이 들면 물을 줍니다</li>
+                    <li><strong>계절 조정:</strong> 여름에는 주 2회, 겨울에는 주 1회로 조정합니다</li>
+                    <li><strong>배수 확인:</strong> 화분 밑으로 물이 나올 때까지 충분히 주되, 받침의 물은 반드시 버립니다</li>
+                    <li><strong>과습 주의:</strong> 식물이 죽는 원인의 80%는 과습입니다. 의심되면 물을 주지 마세요</li>
+                </ul>
+
+                <h3>☀️ 빛 조건 이해하기</h3>
+                <ul class="check-list">
+                    <li><strong>직사광선:</strong> 창문으로 직접 들어오는 햇빛 (선인장, 다육류에 적합)</li>
+                    <li><strong>밝은 간접광:</strong> 창가에서 1-2m 떨어진 곳 (대부분의 관엽식물에 적합)</li>
+                    <li><strong>낮은 빛:</strong> 창가에서 3m 이상, 북향 창가 (산세베리아, 스킨답서스 가능)</li>
+                </ul>
+
+                <h3>🌡️ 온도와 습도</h3>
+                <ul class="check-list">
+                    <li>대부분의 열대 관엽식물은 <strong>18-26°C</strong>를 선호합니다</li>
+                    <li>에어컨, 난방기 바람이 직접 닿지 않게 배치하세요</li>
+                    <li>겨울철 습도가 40% 이하로 떨어지면 분무기로 잎에 물을 뿌려주세요</li>
+                </ul>
+
+                <div class="info-box warning">
+                    <strong>⚠️ 초보자의 흔한 실수</strong><br>
+                    1. 물을 너무 자주 주는 것 (과습)<br>
+                    2. 어두운 곳에 빛을 좋아하는 식물 배치<br>
+                    3. 겨울에도 여름과 같은 양의 물 주기<br>
+                    4. 화분 받침에 고인 물 방치
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="section" id="faq">
+                <h2>❓ 자주 묻는 질문 (FAQ)</h2>
+
+                <div class="faq-item">
+                    <h4>Q: 식물 잎이 노랗게 변하는 이유는?</h4>
+                    <p><strong>A:</strong> 가장 흔한 원인은 과습입니다. 뿌리가 물에 잠겨 산소를 얻지 못하면 잎이 노랗게 변합니다. 물주기를 줄이고 환기를 개선하세요. 반대로 잎
+                        끝만 갈색으로 마르면 건조함의 신호입니다.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 반려동물에게 안전한 식물은?</h4>
+                    <p><strong>A:</strong> 아레카야자, 보스턴 고사리, 스파이더 플랜트는 ASPCA에서 무독성으로 인증한 식물입니다. 스파티필름과 스킨답서스는 독성이 있으므로
+                        반려동물이 닿지 않는 곳에 두세요.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 인공조명에서도 식물이 자랄 수 있나요?</h4>
+                    <p><strong>A:</strong> 네, 가능합니다. 산세베리아, 스킨답서스, 드라세나는 형광등이나 LED 조명만으로도 생존할 수 있습니다. 단, 성장이 느려질 수 있으며,
+                        주기적으로 창가에 두어 자연광을 보충해주면 좋습니다.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q: 화분 크기는 어떻게 선택하나요?</h4>
+                    <p><strong>A:</strong> 현재 화분보다 지름이 2-5cm 큰 화분으로 분갈이하세요. 너무 큰 화분은 흙이 마르지 않아 과습의 원인이 됩니다. 배수구가 있는 화분을
+                        선택하는 것이 중요합니다.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>📑 목차</h3>
+                <ul class="toc-list">
+                    <li><a href="#intro">왜 실내 식물이 필수인가?</a></li>
+                    <li><a href="#plants">NASA 추천 TOP 7 식물</a></li>
+                    <li><a href="#benefits">건강 효과</a></li>
+                    <li><a href="#care">관리 노하우</a></li>
+                    <li><a href="#faq">자주 묻는 질문</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>🏆 난이도별 추천</h3>
+                <p><strong>입문자:</strong> 스킨답서스, 산세베리아</p>
+                <p><strong>중급자:</strong> 고무나무, 드라세나</p>
+                <p><strong>도전:</strong> 보스턴 고사리, 아레카야자</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>📍 공간별 추천</h3>
+                <p><strong>거실:</strong> 아레카야자, 고무나무</p>
+                <p><strong>침실:</strong> 산세베리아</p>
+                <p><strong>욕실:</strong> 보스턴 고사리</p>
+                <p><strong>사무실:</strong> 드라세나, 스킨답서스</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Arecacoco. 건강한 실내 환경을 위한 식물 정보 제공.</p>
-        <p>본 정보는 교육 목적으로 제공되며, NASA 및 과학 연구 자료를 기반으로 작성되었습니다.</p>
+        <div class="footer-content">
+            <div>
+                <h4>🌿 Arecacoco</h4>
+                <p>과학적 근거와 전문가의 경험을 바탕으로 한 실내 식물 정보를 제공합니다. NASA 연구, 국내외 학술 자료, 그리고 원예 전문가의 조언을 종합하여 누구나 쉽게 실내 정원을 가꿀 수
+                    있도록 돕습니다.</p>
+            </div>
+            <div>
+                <h4>📚 참고 자료</h4>
+                <p>• NASA Clean Air Study (1989)<br>
+                    • 농촌진흥청 실내정원 연구<br>
+                    • ASPCA 반려동물 독성 식물 목록<br>
+                    • Royal Horticultural Society 가이드</p>
+            </div>
+            <div>
+                <h4>📧 문의</h4>
+                <p>본 사이트의 정보는 교육 목적으로 제공되며, 개별 식물의 상태는 환경에 따라 다를 수 있습니다.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Arecacoco. All rights reserved. | 이 사이트는 Google AdSense 광고를 포함합니다.</p>
+        </div>
     </footer>
 </body>
 
