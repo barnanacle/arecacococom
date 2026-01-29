@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+
+# Temporary files
+*.tmp
+*.temp
+
+# SSH credentials
+_connect_ssh.txt

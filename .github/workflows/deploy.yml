@@ -1,0 +1,60 @@
+name: Deploy to Cafe24
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy to Cafe24 via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.CAFE24_FTP_HOST }}
+        username: ${{ secrets.CAFE24_FTP_USERNAME }}
+        password: ${{ secrets.CAFE24_FTP_PASSWORD }}
+        server-dir: '/'
+        log-level: verbose
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.env
+          **/.env.*
+          **/README.md
+          **/.gitignore
+          **/.github/**
+          **/.DS_Store
+          **/Thumbs.db
+          **/*.log
+          **/*.tmp
+          **/*.temp
+          **/ARECACOCO_DEPLOYMENT_GUIDE.md
+          **/_connect_ssh.txt
+
+    - name: Fix permissions after FTP upload
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.CAFE24_SSH_HOST }}
+        username: ${{ secrets.CAFE24_SSH_USERNAME }}
+        key: ${{ secrets.CAFE24_SSH_KEY }}
+        script: |
+          echo "🔧 FTP 업로드 후 권한 수정 중..."
+
+          # 권한 설정
+          chown -R www-data:www-data /var/www/html
+          chmod -R 755 /var/www/html
+
+          # 업로드된 파일들 확인
+          echo "📁 업로드된 파일들:"
+          ls -la /var/www/html/
+
+          echo "✅ arecacoco.com 배포 완료!"
+        port: 22
+        timeout: 30s
+        command_timeout: 2m

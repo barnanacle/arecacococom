@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아레카코코 - Arecacoco</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .timestamp {
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .status {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(76, 175, 80, 0.3);
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌴 아레카코코</h1>
+        <p class="subtitle">Arecacoco - Coming Soon</p>
+
+        <div class="status">
+            <strong>✅ GitHub Actions 자동 배포 테스트</strong>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                이 페이지는 GitHub에서 자동으로 배포되었습니다.
+            </p>
+        </div>
+
+        <div class="badge">
+            🚀 Deployed via GitHub Actions
+        </div>
+
+        <div class="timestamp">
+            Last Updated: <span id="timestamp"></span>
+        </div>
+    </div>
+
+    <script>
+        // 현재 시간 표시
+        const now = new Date();
+        const options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            timeZone: 'Asia/Seoul'
+        };
+        document.getElementById('timestamp').textContent =
+            now.toLocaleDateString('ko-KR', options);
+    </script>
+</body>
+
+</html>
