@@ -4,7 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>아레카코코 - Arecacoco</title>
+
+    <!-- SEO Meta Tags -->
+    <title>아레카코코 - Arecacoco | 프리미엄 아레카야자 전문 쇼핑몰</title>
+    <meta name="description" content="아레카코코는 최고 품질의 아레카야자와 실내 식물을 제공하는 프리미엄 온라인 쇼핑몰입니다. 공기정화 식물로 건강한 실내 환경을 만들어보세요.">
+    <meta name="keywords" content="아레카야자, 아레카코코, 실내식물, 공기정화식물, 화분, 관엽식물, arecacoco">
+    <meta name="author" content="Arecacoco">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="아레카코코 - Arecacoco | 프리미엄 아레카야자 전문 쇼핑몰">
+    <meta property="og:description" content="최고 품질의 아레카야자와 실내 식물을 만나보세요. 곧 오픈합니다!">
+    <meta property="og:url" content="https://arecacoco.com">
+    <meta property="og:site_name" content="Arecacoco">
+
+    <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-6662057007130790">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6662057007130790"
+        crossorigin="anonymous"></script>
+
     <style>
         * {
             margin: 0;
@@ -13,110 +32,168 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Noto Sans KR', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
+            padding: 20px;
+            line-height: 1.6;
         }
 
         .container {
-            text-align: center;
-            padding: 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
             border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
             max-width: 600px;
-            animation: fadeIn 1s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            width: 100%;
+            backdrop-filter: blur(10px);
         }
 
         h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #333;
         }
 
         .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .description {
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        .features {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .features h2 {
+            font-size: 1.3em;
+            color: #667eea;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            padding: 10px 0;
+            color: #555;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .features li::before {
+            content: "🌿 ";
+            margin-right: 8px;
+        }
+
+        .status {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
         }
 
         .badge {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 10px;
         }
 
         .timestamp {
-            margin-top: 2rem;
-            font-size: 0.85rem;
-            opacity: 0.7;
+            color: #999;
+            font-size: 0.85em;
+            margin-top: 20px;
         }
 
-        .status {
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: rgba(76, 175, 80, 0.3);
-            border-radius: 10px;
-            border-left: 4px solid #4CAF50;
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>🌴 아레카코코</h1>
-        <p class="subtitle">Arecacoco - Coming Soon</p>
+        <header>
+            <h1>🌴 아레카코코</h1>
+            <p class="subtitle">Arecacoco - Premium Indoor Plants</p>
+        </header>
 
-        <div class="status">
-            <strong>✅ GitHub Actions 자동 배포 테스트</strong>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-                이 페이지는 GitHub에서 자동으로 배포되었습니다.
+        <main>
+            <p class="description">
+                최고 품질의 아레카야자와 실내 식물을 제공하는 프리미엄 온라인 쇼핑몰입니다.
+                건강한 실내 환경을 위한 공기정화 식물을 만나보세요.
             </p>
-        </div>
 
-        <div class="badge">
-            🚀 Deployed via GitHub Actions
-        </div>
+            <section class="features">
+                <h2>🌟 Coming Soon</h2>
+                <ul>
+                    <li>프리미엄 아레카야자 컬렉션</li>
+                    <li>전문가가 선별한 실내 공기정화 식물</li>
+                    <li>식물 케어 가이드 및 상담 서비스</li>
+                    <li>전국 안전 배송 시스템</li>
+                </ul>
+            </section>
 
-        <div class="timestamp">
-            Last Updated: <span id="timestamp"></span>
-        </div>
+            <div class="status">
+                <strong>✅ 사이트 준비 중</strong><br>
+                곧 오픈 예정입니다. 조금만 기다려주세요!
+            </div>
+
+            <span class="badge">🚀 Powered by GitHub Actions</span>
+        </main>
+
+        <footer>
+            <p class="timestamp">Last Updated: <span id="timestamp"></span></p>
+        </footer>
     </div>
 
     <script>
-        // 현재 시간 표시
-        const now = new Date();
-        const options = {
+        document.getElementById('timestamp').textContent = new Date().toLocaleString('ko-KR', {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
             hour: '2-digit',
-            minute: '2-digit',
-            timeZone: 'Asia/Seoul'
-        };
-        document.getElementById('timestamp').textContent =
-            now.toLocaleDateString('ko-KR', options);
+            minute: '2-digit'
+        });
     </script>
 </body>
 
