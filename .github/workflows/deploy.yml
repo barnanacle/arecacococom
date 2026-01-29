@@ -12,39 +12,24 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Deploy to Cafe24 via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: Deploy to Cafe24 via SFTP
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        server: ${{ secrets.CAFE24_FTP_HOST }}
-        username: ${{ secrets.CAFE24_FTP_USERNAME }}
-        password: ${{ secrets.CAFE24_FTP_PASSWORD }}
-        server-dir: '/'
-        log-level: verbose
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          **/.env
-          **/.env.*
-          **/README.md
-          **/.gitignore
-          **/.github/**
-          **/.DS_Store
-          **/Thumbs.db
-          **/*.log
-          **/*.tmp
-          **/*.temp
-          **/ARECACOCO_DEPLOYMENT_GUIDE.md
-          **/_connect_ssh.txt
+        server: ${{ secrets.CAFE24_SSH_HOST }}
+        username: ${{ secrets.CAFE24_SSH_USERNAME }}
+        ssh_private_key: ${{ secrets.CAFE24_SSH_KEY }}
+        local_path: './*'
+        remote_path: '/var/www/html/'
+        sftp_only: true
 
-    - name: Fix permissions after FTP upload
+    - name: Fix permissions after SFTP upload
       uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.CAFE24_SSH_HOST }}
         username: ${{ secrets.CAFE24_SSH_USERNAME }}
         key: ${{ secrets.CAFE24_SSH_KEY }}
         script: |
-          echo "🔧 FTP 업로드 후 권한 수정 중..."
+          echo "🔧 SFTP 업로드 후 권한 수정 중..."
 
           # 권한 설정
           chown -R www-data:www-data /var/www/html
